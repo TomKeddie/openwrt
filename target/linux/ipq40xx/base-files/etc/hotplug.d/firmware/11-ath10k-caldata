@@ -14,6 +14,9 @@ case "$FIRMWARE" in
 		caldata_valid "4408" || caldata_extract "ART" 0x9000 0x844
 		ath10k_patch_mac $(macaddr_add $(get_mac_binary "/sys/bus/i2c/devices/0-0050/eeprom" 0x66) +1)
 		;;
+	motorola,mh7020)
+		caldata_extract "0:ART" 0x9000 0x2f20
+		;;
 	esac
 	;;
 "ath10k/pre-cal-pci-0000:01:00.0.bin")
@@ -107,6 +110,7 @@ case "$FIRMWARE" in
 	plasmacloud,pa2200 |\
 	qxwlan,e2600ac-c1 |\
 	qxwlan,e2600ac-c2 |\
+	motorola,mh7020 |\
 	unielec,u4019-32m)
 		caldata_extract "0:ART" 0x1000 0x2f20
 		;;
@@ -216,6 +220,7 @@ case "$FIRMWARE" in
 	plasmacloud,pa2200 |\
 	qxwlan,e2600ac-c1 |\
 	qxwlan,e2600ac-c2 |\
+	motorola,mh7020 |\
 	unielec,u4019-32m)
 		caldata_extract "0:ART" 0x5000 0x2f20
 		;;

@@ -612,6 +612,19 @@ define Device/mobipromo_cm520-79f
 endef
 TARGET_DEVICES += mobipromo_cm520-79f
 
+define Device/motorola_mh7020
+	$(call Device/FitImage)
+	DEVICE_VENDOR := Motorola
+	DEVICE_MODEL := MH7020
+	BOARD_NAME := motorola_mh7020
+	SOC := qcom-ipq4019
+	KERNEL_SIZE := 4096k
+	IMAGE_SIZE := 31232k
+	IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | append-metadata
+	DEVICE_PACKAGES := ath10k-firmware-qca9888-ct ipq-wifi-motorola_mh7020
+endef
+TARGET_DEVICES += motorola_mh7020
+
 define Device/netgear_ex61x0v2
 	$(call Device/DniImage)
 	DEVICE_VENDOR := NETGEAR

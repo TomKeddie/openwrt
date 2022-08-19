@@ -1,0 +1,10 @@
+--- linux-5.4.142/arch/arm/boot/dts/Makefile	2021-12-01 09:35:55.741887465 +0530
++++ linux-5.4.142-new/arch/arm/boot/dts/Makefile	2021-11-30 17:17:49.483133315 +0530
+@@ -878,6 +878,7 @@ dtb-$(CONFIG_ARCH_QCOM) += \
+ 	qcom-ipq4019-fritzrepeater-1200.dtb \
+ 	qcom-ipq4019-fritzrepeater-3000.dtb \
+ 	qcom-ipq4019-map-ac2200.dtb \
++	qcom-ipq4019-mh7020.dtb \
+ 	qcom-ipq4019-mr8300.dtb \
+ 	qcom-ipq4019-e2600ac-c1.dtb \
+ 	qcom-ipq4019-e2600ac-c2.dtb \
